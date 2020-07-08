@@ -11,9 +11,11 @@ namespace QueryIt
     {
         static void Main(string[] args)
         {
+            _ = args;
+
             Converter<Employee, Employee> converter = ConvertIt;
 
-            var c = converter(new Employee());
+            _ = converter(new Manager());
 
             Database.SetInitializer(new DropCreateDatabaseAlways<EmployeeDb>());
 

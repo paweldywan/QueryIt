@@ -32,8 +32,8 @@ namespace QueryIt
 
     public class SqlRepository<T> : IRepository<T> where T : class, IEntity
     {
-        DbContext _ctx;
-        DbSet<T> _set;
+        private readonly DbContext _ctx;
+        private readonly DbSet<T> _set;
 
         public SqlRepository(DbContext ctx)
         {
